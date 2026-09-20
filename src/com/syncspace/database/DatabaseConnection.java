@@ -11,5 +11,7 @@ public final class DatabaseConnection {
 
     private DatabaseConnection() {
     }
-    
+    public static Connection getConnection() throws SQLException {
+        String password = System.getenv("SYNCSPACE_DB_PASSWORD");
+    }
 }
