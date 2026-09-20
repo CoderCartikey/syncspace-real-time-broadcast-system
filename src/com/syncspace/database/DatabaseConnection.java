@@ -11,6 +11,5 @@ public final class DatabaseConnection {
 
     private DatabaseConnection() {
     }
-
+    
 }
-
