@@ -13,5 +13,12 @@ public final class DatabaseConnection {
     }
     public static Connection getConnection() throws SQLException {
         String password = System.getenv("SYNCSPACE_DB_PASSWORD");
+
+        if (password == null || password.isEmpty()) {
+            throws new IllegalStateException(
+                    "Set SUNCSPACE_DB_PASSWORD first."
+            );
+        }
+        return DriverManager.getConnection(URL,USER, password);
     }
 }
