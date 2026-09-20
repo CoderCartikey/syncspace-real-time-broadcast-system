@@ -15,7 +15,7 @@ public final class DatabaseConnection {
         String password = System.getenv("SYNCSPACE_DB_PASSWORD");
 
         if (password == null || password.isEmpty()) {
-            throws new IllegalStateException(
+            throw new IllegalStateException(
                     "Set SUNCSPACE_DB_PASSWORD first."
             );
         }
